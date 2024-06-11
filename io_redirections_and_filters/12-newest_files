@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lat | head -10
+ls | sort -n -r | head -10
