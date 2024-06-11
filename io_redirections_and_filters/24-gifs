@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -print0 | xargs -0 -I {} sh -c 'echo "${1%.*}"' _ {} | sort -f
+find . -type f -name "*.gif" -exec sh -c 'for f; do echo "${f##*/}" | rev | cut -d. -f2- | rev; break; done' sh {} \; | sort -f
