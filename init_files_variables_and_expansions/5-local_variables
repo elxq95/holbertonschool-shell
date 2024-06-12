@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(printenv) $(declare -p) $(declare -F)
+echo $(set; export -p) $(declare -F)
